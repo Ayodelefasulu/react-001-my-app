@@ -1,5 +1,13 @@
 // eslint-disable-next-line
 import React from 'react';
+//import '../../../django-project/consulting/just_static/static/css/owl.carousel.min.css';
+//import '../../../django-project/consulting/just_static/static/css/jquery.fancybox.min.css';
+//import '../../../django-project/consulting/just_static/static/css/all.css';
+//import '../../../django-project/consulting/just_static/static/css/style.css';
+import 'assets/css/owl.carousel.min.css';
+import 'assets/css/jquery.fancybox.min.css';
+import 'assets/css/all.css';
+//import 'assets/css/style.css';
 
 const PortfolioItem = ({ image, title }) => {
   return (
