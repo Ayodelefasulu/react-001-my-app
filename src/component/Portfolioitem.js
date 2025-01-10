@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React from 'react';
 
 const PortfolioItem = ({ image, title }) => {
@@ -14,7 +15,8 @@ const PortfolioItem = ({ image, title }) => {
         </div>
         <div className="card-body">
           <h4 className="card-title">
-            <a href="#">{title}</a>
+            
+            <a href="/">{title}</a>
           </h4>
         </div>
       </div>

@@ -23,7 +23,9 @@ const App = () => {
 
   return (
     <div>
-      <Carousel />
+      <div className='mb-5'>
+        <Carousel />
+      </div>
       <AboutSection />
       <div className="services-bar container">
         <h1 className="py-4">Our Best Services</h1>
