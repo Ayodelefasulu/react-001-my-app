@@ -6,20 +6,6 @@ import AboutSection from './component/About';
 import ServiceCard from './component/Servicecard';
 import PortfolioItem from './component/Portfolioitem';
 
-/*function App() {
-  return (
-    <div className="App">
-      <Navbar dark color="primary">
-        <div className='container'>
-          <NavbarBrand href="/">
-            Ristorante Con Fusion
-          </NavbarBrand>
-        </div>
-      </Navbar>
-    </div>
-  );
-}
-*/
 
 
 const App = () => {
