@@ -73,8 +73,8 @@ export const Navbar = () => (
           </li>      
         </ul>
         <div className=''>
-          <a className="link-success link-offset-2 link-underline-opacity-100-hover m-4" href="/register">Sign Up</a>
-          <a className="link-primary link-offset-2 link-underline-opacity-100-hover m-4" href="/login">Login</a>
+          <a className="link-success link-offset-2 text-decoration-none m-4" href="/register">Sign Up</a>
+          <a className="link-primary link-offset-2 text-decoration-none m-4" href="/login">Login</a>
         </div>
       </div>
     </div>
