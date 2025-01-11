@@ -51,8 +51,8 @@ export const Navbar = () => (
       >
         <span className="fas fa-bars"></span>
       </button>
-      <div className="collapse navbar-collapse" id="navbarResponsive">
-        <ul className="navbar-nav ml-auto">
+      <div className="collapse navbar-collapse d-flex justify-content-between" id="navbarResponsive">
+        <ul className="navbar-nav">
           <li className="nav-item">
             <a className="nav-link" href="/">Home</a>
           </li>
@@ -70,14 +70,12 @@ export const Navbar = () => (
               <a className="dropdown-item" href="/faq">FAQ</a>
               <a className="dropdown-item" href="/pricing">Pricing Table</a>
             </div>
-          </li>
-          <li className="nav-item">
-            <a className="link-success ml-4" href="/register">Sign Up</a>
-          </li>
-          <li className="nav-item">
-            <a className="link-primary ml-4" href="/login">Login</a>
-          </li>
+          </li>      
         </ul>
+        <div className=''>
+          <a className="link-success link-offset-2 link-underline-opacity-100-hover m-4" href="/register">Sign Up</a>
+          <a className="link-primary link-offset-2 link-underline-opacity-100-hover m-4" href="/login">Login</a>
+        </div>
       </div>
     </div>
   </nav>

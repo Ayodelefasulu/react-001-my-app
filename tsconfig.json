@@ -1,0 +1,11 @@
+{
+    "exclude": [
+      "coverage"
+    ],
+    "compilerOptions": {
+      "typeRoots": [
+        "types"
+      ]
+    }
+  }
+  
