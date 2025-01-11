@@ -52,7 +52,7 @@ export const Navbar = () => (
         <span className="fas fa-bars"></span>
       </button>
       <div className="collapse navbar-collapse d-flex justify-content-between" id="navbarResponsive">
-        <ul className="navbar-nav">
+        <ul className="navbar-nav ml-auto">
           <li className="nav-item">
             <a className="nav-link" href="/"><i class="fas fa-home"></i> Home</a>
           </li>
