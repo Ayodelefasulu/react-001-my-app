@@ -5,7 +5,7 @@ import Carousel from './component/Carousel';
 import AboutSection from './component/About';
 import ServiceCard from './component/Servicecard';
 import PortfolioItem from './component/Portfolioitem';
-
+import { TopBar, Navbar, Footer } from './component/skeleton';
 
 
 const App = () => {
@@ -23,6 +23,8 @@ const App = () => {
 
   return (
     <div>
+      <TopBar />
+      <Navbar />
       <div className='mb-5'>
         <Carousel />
       </div>
@@ -43,6 +45,7 @@ const App = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
