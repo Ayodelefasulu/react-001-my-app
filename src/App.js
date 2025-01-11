@@ -25,7 +25,7 @@ const App = () => {
     <div>
       <TopBar />
       <Navbar />
-      <div className='mb-5'>
+      <div className=''>
         <Carousel />
       </div>
       <AboutSection />

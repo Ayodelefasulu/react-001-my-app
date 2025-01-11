@@ -54,17 +54,17 @@ export const Navbar = () => (
       <div className="collapse navbar-collapse d-flex justify-content-between" id="navbarResponsive">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link" href="/">Home</a>
+            <a className="nav-link" href="/"><i class="fas fa-home"></i> Home</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/about">About</a>
+            <a className="nav-link" href="/about"><i class="fas fa-info-circle"></i> About</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/services">Services</a>
+            <a className="nav-link" href="/services"><i class="fas fa-concierge-bell"></i> Services</a>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Pages
+            <i class="fas fa-file-alt"></i> Pages
             </a>
             <div className="dropdown-menu dropdown-menu-right" aria-labelledby="pagesDropdown">
               <a className="dropdown-item" href="/faq">FAQ</a>
@@ -73,8 +73,8 @@ export const Navbar = () => (
           </li>      
         </ul>
         <div className=''>
-          <a className="link-success link-offset-2 text-decoration-none m-4" href="/register">Sign Up</a>
-          <a className="link-primary link-offset-2 text-decoration-none m-4" href="/login">Login</a>
+          <a className="link-success link-offset-2 text-decoration-none m-4 fas fa-user-plus" href="/register">Sign Up</a>
+          <a className="link-primary link-offset-2 text-decoration-none m-4 fas sign-in-alt" href="/login">Login</a>
         </div>
       </div>
     </div>
