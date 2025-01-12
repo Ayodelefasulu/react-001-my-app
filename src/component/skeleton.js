@@ -1,5 +1,6 @@
 // Importing dependencies
 import React from 'react';
+//import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'assets/css/all.css';
 import 'assets/css/owl.carousel.min.css';
@@ -57,7 +58,8 @@ export const Navbar = () => (
             <a className="nav-link" href="/"><i class="fas fa-home"></i> Home</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/about"><i class="fas fa-info-circle"></i> About</a>
+            {/*<Link to="/about" className="nav-link" href="/about"><i class="fas fa-info-circle"></i> About</Link>*/}
+            <a to="/about" className="nav-link" href="/about"><i class="fas fa-info-circle"></i> About</a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="/services"><i class="fas fa-concierge-bell"></i> Services</a>
@@ -74,7 +76,7 @@ export const Navbar = () => (
         </ul>
         <div className=''>
           <a className="link-success link-offset-2 text-decoration-none m-4 fas fa-user-plus" href="/register">Sign Up</a>
-          <a className="link-primary link-offset-2 text-decoration-none m-4 fas sign-in-alt" href="/login">Login</a>
+          <a className="link-primary link-offset-2 text-decoration-none m-4 fas fa-sign-in-alt" href="/login">Login</a>
         </div>
       </div>
     </div>

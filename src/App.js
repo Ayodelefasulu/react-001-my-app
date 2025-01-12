@@ -1,5 +1,7 @@
 //import logo from './logo.svg';
 //import { Navbar, NavbarBrand } from 'reactstrap';
+import React from "react";
+//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import Carousel from './component/Carousel';
 import AboutSection from './component/About';
@@ -25,10 +27,12 @@ const App = () => {
     <div>
       <TopBar />
       <Navbar />
-      <div className=''>
-        <Carousel />
-      </div>
+      <Carousel />
       <AboutSection />
+      {/*<Routes>
+        <Route path="about" element={<AboutSection />} />
+      </Routes>*/}
+      
       <div className="services-bar container">
         <h1 className="py-4">Our Best Services</h1>
         <div className="row">
