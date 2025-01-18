@@ -1,17 +1,17 @@
 import { Component } from "react";
-import { getMovies } from "../services/fakeMovieService";
+import { getMovies, deleteMovie } from "../services/fakeMovieService";
 import { getGenre } from "../services/fakeGenreService";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Movies extends Component {
   
   
-  deleteMovie() {
-
-  };
-  
   render() {
     const allMovies = getMovies();
+    // const deleteM = function() {
+    //   const d = document.getElementById("key");
+    //   deleteMovie(d);
+    // };
     return (
       <div className="container table-responsive">
       <table className="table table-hover table-striped table-sm">
@@ -24,12 +24,12 @@ class Movies extends Component {
           </tr>
         </thead>
         <tbody className="text-success">
-          {allMovies.map((m, index) => (
-            <tr key={m.id}>{m.title}
+          {allMovies.map((m) => (
+            <tr key={m._id}>{m.title}
               <th scope="row">{m.genre.name}</th>
               <th scope="row">{m.numberInStock}</th>
               <th scope="row">{m.dailyRentalRate}</th>
-              <button type="button" className="btn p-2 m-2 border-2 btn-danger btn-lg shadow">Erase</button>
+              <th><button onClick={()=>deleteMovie(m._id)} className="btn p-2 m-2 btn-danger btn-lg shadow">Erase</button></th>
             </tr>
             ))
           }
