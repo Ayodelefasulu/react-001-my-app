@@ -1,7 +1,43 @@
-import { getMovies } from "./services/fakeMoviesService";
-import { getGenre } from "../services/fakeGenreServices";
+import { Component } from "react";
+import { getMovies } from "../services/fakeMovieService";
+import { getGenre } from "../services/fakeGenreService";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Movies extends Component {
   
+  
+  deleteMovie() {
+
+  };
+  
+  render() {
+    const allMovies = getMovies();
+    return (
+      <div className="container table-responsive">
+      <table className="table table-hover table-striped table-sm">
+        <thead className="thead-dark text-success">
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Rate</th>
+          </tr>
+        </thead>
+        <tbody className="text-success">
+          {allMovies.map((m, index) => (
+            <tr key={m.id}>{m.title}
+              <th scope="row">{m.genre.name}</th>
+              <th scope="row">{m.numberInStock}</th>
+              <th scope="row">{m.dailyRentalRate}</th>
+              <button type="button" className="btn p-2 m-2 border-2 btn-danger btn-lg shadow">Erase</button>
+            </tr>
+            ))
+          }
+        </tbody>
+      </table>
+      </div>
+    )
+  }
 }
+
+export default Movies;

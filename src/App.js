@@ -7,6 +7,7 @@ import Carousel from './component/Carousel';
 import AboutSection from './component/About';
 import ServiceCard from './component/Servicecard';
 import PortfolioItem from './component/Portfolioitem';
+import Movies from './component/Movies';
 import { TopBar, Navbar, Footer } from './component/skeleton';
 
 
@@ -28,6 +29,7 @@ const App = () => {
       <TopBar />
       <Navbar />
       <Carousel />
+      <Movies />
       <AboutSection />
       {/*<Routes>
         <Route path="about" element={<AboutSection />} />
