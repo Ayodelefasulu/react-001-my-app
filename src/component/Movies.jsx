@@ -19,20 +19,27 @@ class Movies extends Component {
 
     const handleDelete = (id) => {
       const updateMovie = deleteMovie(id);
+      const hide = document.getElementById('hide');
+      
+      //this logic hides the table when row number reaches 0
+      if (allMovies.length === 0) {
+        this.setState({showDiv: false});
+      }
+
       return this.setState({allMovies: updateMovie});
       
     };
-
     
     return (
       <>
         <br></br>
         <div style={{}} className="container">
           {allMovies.length !== 0 ? <h3>The number of rows are {allMovies.length}</h3>: (<h3 className="text-danger">No more rows</h3>) }
-          {allMovies.length !== 0 ? <div></div> : <h4>finsihed</h4>}
+          {/* {allMovies.length !== 0 ? <div></div> : <h4>finsihed</h4>} */}
         </div>
         
-        <div className="container table-responsive">
+        {this.state.showDiv && (
+        <div id="hide" className="container table-responsive">
           <table className="table table-hover table-striped table-sm">
             <thead className="thead-dark text-success">
               <tr>
@@ -55,7 +62,7 @@ class Movies extends Component {
               }
             </tbody>
           </table>
-        </div>
+        </div>)}
       </>
     )
   }
