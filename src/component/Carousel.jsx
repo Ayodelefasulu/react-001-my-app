@@ -61,7 +61,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const Carousel = () => {
   return (
-    <div id="carouselExample" className="container carousel slide" data-bs-ride="carousel">
+    <div id="carouselExample" className="container-fluid carousel slide" data-bs-ride="carousel">
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img src="/images/slider-01.jpg" className="d-block w-100" alt="..." />

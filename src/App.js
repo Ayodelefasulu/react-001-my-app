@@ -14,12 +14,14 @@ const App = () => {
   const services = [
     { image: '/images/services-img-01.jpg', title: 'Analytics', description: 'Sapiente esse necessitatibus neque.' },
     { image: '/images/services-img-02.jpg', title: 'Applications', description: 'Sapiente esse necessitatibus neque.' },
+    { image: '/images/services-img-03.jpg', title: 'Algorithm', description: 'Sapiente esse necessitatibus neque.' },
     // Add other services here
   ];
 
   const portfolioItems = [
     { image: '/images/portfolio-img-01.jpg', title: 'Financial Sustainability' },
     { image: '/images/portfolio-img-02.jpg', title: 'Business Growth' },
+    { image: '/images/portfolio-img-03.jpg', title: 'Business Intelligence' },
     // Add other portfolio items here
   ];
 

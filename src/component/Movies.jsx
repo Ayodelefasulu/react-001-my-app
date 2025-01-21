@@ -8,7 +8,7 @@ class Movies extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showDiv: true
+      showDiv: true,
     };
   }
 
@@ -26,7 +26,7 @@ class Movies extends Component {
         this.setState({showDiv: false});
       }
 
-      return this.setState({allMovies: updateMovie});
+      this.setState({allMovies: updateMovie});
       
     };
     
