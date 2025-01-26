@@ -1,4 +1,4 @@
-import { Component, createElement, React } from "react";
+import { Component, React } from "react";
 import { getMovies, deleteMovie } from "../services/fakeMovieService";
 import { getGenre } from "../services/fakeGenreService";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,14 +11,19 @@ class Movies extends Component {
       showDiv: true,
       showBtn: false,
       count: 0,
+      //allMovies: getMovies(),
     };
+    
   }
 
   //variable
   allMovies = getMovies();
+  
+  
+  
 
   //method
-  handleDelete(id){
+  handleDelete = (id) => {
     const updateMovie = deleteMovie(id);
     
     //this logic hides the table when row number reaches 0
@@ -28,11 +33,37 @@ class Movies extends Component {
     this.setState({allMovies: updateMovie});
   };
 
+  addRow = () => {
+    //const newRow = document.getElementById('newRow');
+    //const newElement = document.createElement('td');
+    //newElement.textContent = this.allMovies.map((m) => m.title);
+    //newRow.appendChild(newElement);
+    // this.setState((prevState) => ({
+    //   count: prevState.count + 1,
+    //   showBtn: true,
+    // }));
+    //console.log(this.ind, this.count);
+    //this.setState({showBtn: true});
+    //this.count++
+    if (this.state.count < this.allMovies.length - 1) {
+      
+      this.setState({showBtn: true});
+      this.setState({count: this.state.count + 1});
+    }
+  };
+
   // I FIND OUT THAT VARIABLES, METHODS, FUNCTIONS CAN BE
   // DEFINED OUTSIDE THE RENDER FUNCTION. THIS WILL MAKE THEM HAVE ACCESS
   // TO THE "THIS" PROPERTY OF THE COMPONENT
 
   render() {
+    
+    //console.log(this.state.allMovies);
+    //console.log("count", this.state.count);
+
+    const { count } = this.state;
+    const ind = this.allMovies[count];
+    
 
     return (
       <>
@@ -62,17 +93,17 @@ class Movies extends Component {
                   <td scope="row">{m.genre.name}</td>
                   <td scope="row">{m.numberInStock}</td>
                   <td scope="row">{m.dailyRentalRate}</td>
-                  <td><button onClick={()=>{this.handleDelete(m._id)}} className="btn p-2 m-2 btn-danger btn-sm shadow">Erase</button></td>
+                  <td><button onClick={()=>{this.handleDelete(m._id);}} className="btn p-2 m-2 btn-danger btn-sm shadow">Erase</button></td>
                 </tr>
                 ))
               }
               {this.state.showBtn && (
-                <tr key={this.ind._id}>
-                  <td scope="row">{this.ind.title}</td>
-                  <td scope="row">{this.ind.genre.name}</td>
-                  <td scope="row">{this.ind.numberInStock}</td>
-                  <td scope="row">{this.ind.dailyRentalRate}</td>
-                  <td><button onClick={()=>{this.handleDelete(this.ind._id)}} className="btn p-2 m-2 btn-danger btn-sm shadow">Erase</button></td>
+                <tr key={ind._id}>
+                  <td scope="row">{ind.title}</td>
+                  <td scope="row">{ind.genre.name}</td>
+                  <td scope="row">{ind.numberInStock}</td>
+                  <td scope="row">{ind.dailyRentalRate}</td>
+                  <td><button onClick={()=>{this.handleDelete(ind._id)}} className="btn p-2 m-2 btn-danger btn-sm shadow">Erase</button></td>
                 </tr>
                 )
               }
@@ -85,19 +116,6 @@ class Movies extends Component {
       </>
     )
   }
-
-  
-  items = this.allMovies;
-  ind = this.items[this.state.count];
-
-  addRow = () => {
-    //const newRow = document.getElementById('newRow');
-    //const newElement = document.createElement('td');
-    //newElement.textContent = this.allMovies.map((m) => m.title);
-    //newRow.appendChild(newElement);
-    this.setState({count: this.state.count + 1});
-    this.setState({showBtn: true});
-  };
 }
 
 export default Movies;
